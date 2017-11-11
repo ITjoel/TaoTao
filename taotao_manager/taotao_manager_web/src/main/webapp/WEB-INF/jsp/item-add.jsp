@@ -114,6 +114,12 @@
 		$.post("/item/save",$("#itemAddForm").serialize(), function(data){
 			if(data.status == 200){
 				$.messager.alert('提示','新增商品成功!');
+
+				//商品添加成功后关闭添加页面,同时刷新商品列表
+				var selectTab = $('#tabs').tabs('getSelected');
+                var index = $('#tabs').tabs('getTabIndex',selectTab);
+                $('#tabs').tabs('close',index);
+                $("#itemList").datagrid("reload");
 			}
 		});
 	}
