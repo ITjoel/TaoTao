@@ -23,17 +23,18 @@ public class PictureController {
     private String uploadPic(MultipartFile uploadFile) {
         //接收上传的文件
         try {
-            byte[] bytes = uploadFile.getBytes();
+            //接收上传的文件
+            byte[] content = uploadFile.getBytes();
             //取文件的扩展名
             String originalFilename = uploadFile.getOriginalFilename();
-            String filename = originalFilename.substring(originalFilename.lastIndexOf(".") + 1);
+            String ext = originalFilename.substring(originalFilename.lastIndexOf(".") + 1);
             //把文件内容上传到图片服务器。
             FastDFSClient fastDFSClient = new FastDFSClient("classpath:resource/fast_dfs.conf");
-            String url = fastDFSClient.uploadFile(bytes, filename);
+            String url = fastDFSClient.uploadFile(content, ext);
             //从配置文件中取图片服务器的url
             //创建返回结果对象
             Map result = new HashMap<>();
-            result.put("error",0);
+            result.put("error", 0);
             result.put("url", IMAGE_SERVER_URL + url);
             //返回结果
             return JsonUtils.objectToJson(result);
