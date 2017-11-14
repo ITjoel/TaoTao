@@ -5,7 +5,7 @@ taotao_manager/taotao_manager_dao/target/
 taotao_manager/taotao_manager_interface/target/
 taotao_manager/taotao_manager_pojo/target/
 taotao_manager/taotao_manager_service/target/
-taotao_manager/taotao_manager_web/target/
+taotao_manager_web/target/
 .idea
 *.iml
 
