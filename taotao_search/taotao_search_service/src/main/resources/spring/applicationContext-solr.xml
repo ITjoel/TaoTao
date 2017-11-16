@@ -9,6 +9,6 @@
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
     <!--solr单机版-->
     <bean class="org.apache.solr.client.solrj.impl.HttpSolrServer" name="httpSolrServer">
-        <constructor-arg name="baseURL" value="http://192.168.113.130:9999/solr"/>
+        <constructor-arg name="baseURL" value="http://192.168.6.131:9999/solr"/>
     </bean>
 </beans>

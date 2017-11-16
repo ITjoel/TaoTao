@@ -13,6 +13,7 @@
         <module>taotao_portal_web</module>
         <module>taotao_content</module>
         <module>taotao_search</module>
+        <module>taotao_search_web</module>
     </modules>
     <!-- 集中定义依赖版本号 -->
     <properties>

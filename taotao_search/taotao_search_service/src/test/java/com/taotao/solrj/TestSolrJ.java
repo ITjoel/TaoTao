@@ -49,7 +49,7 @@ public class TestSolrJ {
 	
 	@Test
 	public void testQueryIndex() throws Exception {
-		SolrServer solrServer = new HttpSolrServer("http://192.168.131.130:9999/solr");
+		SolrServer solrServer = new HttpSolrServer("http://192.168.113.130:9999/solr");
 		//创建一个Query对象
 		SolrQuery query = new SolrQuery();
 		query.setQuery("三星");
@@ -90,7 +90,7 @@ public class TestSolrJ {
 	@Test
 	public void queryDocumentWithHighLighting() throws Exception {
 		// 第一步：创建一个SolrServer对象
-		SolrServer solrServer = new HttpSolrServer("http://192.168.25.154:8080/solr");
+		SolrServer solrServer = new HttpSolrServer("http://192.168.113.130:9999/solr");
 		// 第二步：创建一个SolrQuery对象。
 		SolrQuery query = new SolrQuery();
 		// 第三步：向SolrQuery中添加查询条件、过滤条件。。。
